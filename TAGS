@@ -1,0 +1,115 @@
+
+lib/gauge_fields.c,21
+PR(7,101
+PR(22,426
+
+lib/su3linalg.h,129
+#define _SU3LINALG_H 2,21
+#define INLINE 6,83
+su3_mul_uu(12,181
+su3_mul_ud(75,2718
+su3_mul_du(138,5264
+su3_mul_dd(201,7801
+
+lib/spinors.h,25
+#define _SPINORS_H 2,19
+
+lib/lattice.h,25
+#define _LATTICE_H 2,20
+
+lib/precision.h,197
+#define _PRECISION_H 2,21
+#define PR(5,69
+typedef _Complex float qComplex;6,92
+typedef float qReal;7,125
+#define PR(9,152
+typedef _Complex double qComplex;10,175
+typedef double qReal;11,209
+
+lib/plaquette.c,9
+PR(6,72
+
+lib/random_gauge_field.h,36
+#define _RANDOM_GAUGE_FIELD_H 2,30
+
+lib/random_gauge_field.c,34
+exp_gell_mann(9,135
+PR(118,2325
+
+lib/gauge_fields.h,30
+#define _GAUGE_FIELDS_H 2,24
+
+lib/plaquette.h,27
+#define _PLAQUETTE_H 2,22
+
+lib/spinors.c,21
+PR(7,101
+PR(30,638
+
+lib/lattice.c,38
+new_lattice(6,69
+del_lattice(40,951
+
+lib/python/su3linalg.h,124
+#define _SU3LINALG_H 2,21
+#define INLINE 6,83
+su3_mul_uu(11,128
+su3_mul_ud(17,208
+su3_mul_du(23,288
+su3_mul_dd(29,368
+
+lib/python/su3linalg.pytmpl.h,48
+#define _SU3LINALG_H 2,21
+#define INLINE 6,83
+
+lib/defs.h,457
+#define _DEFS_H 2,16
+#define ND 5,56
+#define NS 6,69
+#define NC 7,82
+  int dims[dims10,113
+  int (*nn)nn11,131
+} lattice;12,150
+  _Complex float (*u)u15,179
+  lattice *L;L16,209
+} gauge_field_sp;17,223
+  _Complex double (*u)u20,259
+  lattice *L;L21,290
+} gauge_field_dp;22,304
+  _Complex float (*s)s25,340
+  lattice *L;L26,370
+} spinor_field_sp;27,384
+  _Complex double (*s)s30,421
+  lattice *L;L31,452
+} spinor_field_dp;32,466
+
+main.c,113
+#define MAX_STRING 12,221
+  CONF_READ,14,251
+  CONF_RAND15,264
+} conf_type;16,276
+usage(19,295
+main(26,388
+
+parser/parser.h,24
+#define _PARSER_H 2,18
+
+parser/parser_errors.h,109
+#define _PARSER_ERRORS_H 2,25
+enum parser_errors 3,52
+  PARSER_FILE_ERROR 4,73
+  PARSER_PARSE_ERROR 5,99
+
+parser/parser_defs.h,61
+#define _PARSER_DEFS_H 2,23
+#define PARSER_MAX_STRING 3,48
+
+parser/parser.c,176
+  int N;9,149
+  char **tokens;tokens10,158
+  char **values;values11,175
+} parser;12,192
+trim(15,210
+parser_init(31,502
+parser_finalize(137,3028
+parser_parse(150,3218

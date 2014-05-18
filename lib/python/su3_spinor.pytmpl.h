@@ -1,5 +1,5 @@
-#ifndef _SU3LINALG_H
-#define _SU3LINALG_H 1
+#ifndef _SU3_SPINOR_H
+#define _SU3_SPINOR_H 1
 #include <precision.h>
 
 #ifndef INLINE
@@ -7,4 +7,4 @@
 #endif
 
 XXXBODYXXX
-#endif /* _SU3LINALG_H */
+#endif /* _SU3_SPINOR_H */

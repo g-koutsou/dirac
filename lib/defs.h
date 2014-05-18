@@ -2,6 +2,10 @@
 #define _DEFS_H 1
 #include <complex.h>
 
+#ifndef INLINE
+#define INLINE inline
+#endif
+
 #define ND 4
 #define NS 4
 #define NC 3
@@ -30,5 +34,15 @@ typedef struct {
   _Complex double (*s)[NC*NS];
   lattice *L;
 } spinor_field_dp;
+
+typedef struct {
+  _Complex float (*s)[NC*NS/2];
+  lattice *L;
+} half_spinor_field_sp;
+
+typedef struct {
+  _Complex double (*s)[NC*NS/2];
+  lattice *L;
+} half_spinor_field_dp;
 
 #endif /* _DEFS_H */

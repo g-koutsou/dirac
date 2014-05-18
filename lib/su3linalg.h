@@ -3,12 +3,12 @@
 #include <precision.h>
 
 #ifndef INLINE
-#define INLINE static inline
+#define INLINE inline
 #endif
 
 /* BEGIN python generated segment */
 #if NC == 3
-INLINE void
+static INLINE void
 su3_mul_uu(qReal *z, qReal *x, qReal *y)
 {
   z[ 0+0] = /* (0,0), re */
@@ -71,7 +71,7 @@ su3_mul_uu(qReal *z, qReal *x, qReal *y)
   return;
 }
 
-INLINE void
+static INLINE void
 su3_mul_ud(qReal *z, qReal *x, qReal *y)
 {
   z[ 0+0] = /* (0,0), re */
@@ -134,7 +134,7 @@ su3_mul_ud(qReal *z, qReal *x, qReal *y)
   return;
 }
 
-INLINE void
+static INLINE void
 su3_mul_du(qReal *z, qReal *x, qReal *y)
 {
   z[ 0+0] = /* (0,0), re */
@@ -197,7 +197,7 @@ su3_mul_du(qReal *z, qReal *x, qReal *y)
   return;
 }
 
-INLINE void
+static INLINE void
 su3_mul_dd(qReal *z, qReal *x, qReal *y)
 {
   z[ 0+0] = /* (0,0), re */

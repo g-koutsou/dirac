@@ -8,6 +8,7 @@
 #include <random_gauge_field.h>
 #include <lattice.h>
 #include <plaquette.h>
+#include <dslash.h>
 
 #define MAX_STRING 256
 enum {
@@ -68,19 +69,27 @@ main(int argc, char *argv[])
 
   parser_finalize();
   lattice *lat = new_lattice(dim);
-  gauge_field_sp *U = new_gauge_field_sp(lat);
-  spinor_field_sp *psi = new_spinor_field_sp(lat);
+  gauge_field_dp *U = new_gauge_field_dp(lat);
+  spinor_field_dp *psi0 = new_spinor_field_dp(lat);
+  spinor_field_dp *psi1 = new_spinor_field_dp(lat);
+  double mass = 0.01;
   switch(conf_type) {
   case CONF_RAND:
-    random_gauge_field_sp(U);
+    random_gauge_field_dp(U);
     break;
   case CONF_READ:
-    random_gauge_field_sp(U);
+    random_gauge_field_dp(U);
     break;
   }
-  printf(" Plaquette = %lf\n", plaquette_sp(U));
+  printf(" Plaquette = %lf\n", plaquette_dp(U));
+
+  dslash_init_dp(lat);
+  dslash_dp(psi1, psi0, U, mass);
+  dslash_finalize_dp();
+
   del_lattice(lat);
-  del_spinor_field_sp(psi);
-  del_gauge_field_sp(U);
+  del_spinor_field_dp(psi0);
+  del_spinor_field_dp(psi1);
+  del_gauge_field_dp(U);
   return 0;
 }

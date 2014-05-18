@@ -5,8 +5,8 @@ LIBS=-lm
 RANLIB=ranlib
 
 SOURCES=lattice
-SP_SOURCES=spinors gauge_fields random_gauge_field plaquette
-DP_SOURCES=spinors gauge_fields random_gauge_field plaquette
+SP_SOURCES=spinors gauge_fields random_gauge_field plaquette dslash
+DP_SOURCES=spinors gauge_fields random_gauge_field plaquette dslash
 all: liblat.a
 
 # pull in dependency info for *existing* .o files

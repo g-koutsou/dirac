@@ -3,6 +3,7 @@ main
 *.a
 *.fo
 *.do
+*.o
 *.fd
 *.dd
 *.d
